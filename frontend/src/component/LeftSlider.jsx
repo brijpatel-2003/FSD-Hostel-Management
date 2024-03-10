@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
-import '../slidebar.css'
+// import '../slidebar.css'
 const LeftSlider = () => {
 
  

@@ -47,7 +47,8 @@ const PaginationTable = (props) => {
 
   return (
     <div>
-      <table className="table table-striped table-bordered">
+      <div class="table-responsive">
+      <table className="table table-striped table-bordered  w-lg-100 ">
         <thead>
           <tr>
             {data.columns.map((column, index) => (
@@ -65,15 +66,18 @@ const PaginationTable = (props) => {
           ))}
         </tbody>
       </table>
-      <div className="pagination">
-        <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>
-          Previous
-        </button>
-        <button onClick={() => paginate(currentPage + 1)} disabled={currentItems.length < itemsPerPage}>
-          Next
-        </button>
-      </div>
+     
     </div>
+     <div className="pagination">
+     <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>
+       Previous
+     </button>
+     <button onClick={() => paginate(currentPage + 1)} disabled={currentItems.length < itemsPerPage}>
+       Next
+     </button>
+   </div>
+    </div>
+    
   );
 }
 
