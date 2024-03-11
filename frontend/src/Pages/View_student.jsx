@@ -93,7 +93,13 @@ const View_student = () => {
                                                         
                                                             <Link to = {`../update_student/${info.reg_no}`}><a href="#" title="Edit"><i class="icon-note"></i></a></Link>
                                                             &nbsp;&nbsp;
-                                                            <a href="#" onClick={handelDelete} title="Delete"><i class="icon-close" style={{ Color: "red;" }}></i></a></td>
+                                                            <a href="#" onClick={handelDelete} title="Delete"><i class="icon-close" style={{ Color: "red;" }}></i></a>
+                                                            <Link to ={`../view_payments/${info.reg_no}`}>  <button type="submit" name="submit" 
+                                                
+                                             class="btn  custom-button" title='View Students' style={{backgroundColor: '#1c2d41',color:'white'}}>Payments</button>
+                                                
+                                                </Link>
+                                                            </td>
                                                     </tr>)
                                                 })}
 

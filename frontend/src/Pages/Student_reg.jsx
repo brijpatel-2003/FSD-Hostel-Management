@@ -91,7 +91,7 @@ const Student_reg = () => {
                    
                     total_fees: data.room_fees,
                     fees_paid: 0,
-                    pending_fees: 0,
+                    pending_fees: data.room_fees,
                     date:formatDate(new Date())
                 }
                 fetch(`http://localhost:8081/payment/addPayment/${student.reg_no}`,{

@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Header from '../component/Header'
 import LeftSlider from '../component/LeftSlider'
 import PageTable from '../component/PageTable'
+import { useNavigate } from 'react-router-dom'
 
 
-
+// window.location.reload();
 
 let rooms = [{
     room_no:null,
@@ -21,7 +22,16 @@ const Dashboard = () => {
     let [student,setStudent]=useState(0);
     let [allroom,setAllRoom]=useState(0);
     let [room,setRoom]=useState(0);
+    let navigate = useNavigate();
     let [roomdata,setRoomData] = useState(rooms);
+    useEffect(()=>{
+        const flag = localStorage.getItem('check');
+        if(!flag){
+            
+            navigate('/')
+        }
+        
+    })
     useEffect(()=>{
          fetch("http://localhost:8081/student/getStudentCount").then(res=>res.json()).then(data=>{
            

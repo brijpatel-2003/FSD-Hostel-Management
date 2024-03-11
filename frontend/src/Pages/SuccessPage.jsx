@@ -8,6 +8,10 @@ const SuccessPage = () => {
     let play = ()=>{
      
     }
+    
+    const handleClick = ()=>{
+        navigate('/dashboard');
+    }
   
    
   useEffect(() => {
@@ -50,7 +54,7 @@ const SuccessPage = () => {
             payment.date =formatDate(new Date());
            
             payment.fees_paid = parseInt(payment.fees_paid) + parseInt(amount);
-            payment.pending_fees = parseInt( payment.total_fees) - parseInt(amount) ;
+            payment.pending_fees = parseInt( payment.total_fees) - parseInt( payment.fees_paid) ;
             console.log(payment);
             fetch(`http://localhost:8081/payment/addPayment/${studentid}`,{
                 method: 'POST', // Assuming you're adding a room and following RESTful conventions
@@ -84,7 +88,7 @@ const SuccessPage = () => {
             <p>Thank you for completing your online secure payment.  
                 <br></br><b>Have a great day!</b> </p>
           
-          <Link to = {`/dashboard`}> <button class="btn btn-primary" >Back Home</button></Link> 
+           <button class="btn btn-primary" onClick={handleClick}>Back Home</button>
         </div>
     </div>
     </div>
