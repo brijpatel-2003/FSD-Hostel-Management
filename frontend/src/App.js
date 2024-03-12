@@ -14,6 +14,7 @@ const App = () => {
   let handleSubmit = (event) => {
       if(data.username === 'admin' && data.password === 'admin'){
         toast.success("Logged in Success");
+        localStorage.setItem('check',true);
         navigate('/dashboard')
       }
       else{

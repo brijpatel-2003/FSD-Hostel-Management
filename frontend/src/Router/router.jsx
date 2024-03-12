@@ -11,7 +11,13 @@ import Update_rooms from "../Pages/Update_rooms";
 import Update_Student from "../Pages/Upate_student";
 import Student_list from "../Pages/Student_list";
 import SuccessPage from "../Pages/SuccessPage";
-const router = createBrowserRouter([
+import { useEffect } from "react";
+import View_payments from "../Pages/View_payments";
+
+
+
+const Router =createBrowserRouter([
+  
     {
         path: "/",          // Define the route for "/"
         element: <App />
@@ -56,9 +62,15 @@ const router = createBrowserRouter([
     {
         path:"/sucess/:amt/:id",
         element:<SuccessPage/>
+    },
+    {
+        path:'view_payments/:id',
+        element:<View_payments/>
     }
     
 ]);
 
+
+
   
-export default router;
+export default Router;
