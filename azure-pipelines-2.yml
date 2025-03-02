@@ -22,3 +22,6 @@ steps:
     Body: 'This mail is sent you by azure devops. it means that github FSD/hostel-management is changed or commited.'
     BodyAsHtml: false
     AddAttachment: false
+    SmtpServer: 'smtp.gmail.com'
+    SmtpUsername: 'brijpatidar2003@gmail.com'
+    SmtpPassword: 'bajribajro1234'
