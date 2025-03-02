@@ -83,4 +83,4 @@ The Hostel Management System is a web-based application designed to streamline t
 
 ---
 
-Feel free to contribute to the project by forking and submitting pull requests. If you encounter any issues or have suggestions for improvement, please open an issue in the repository. Thank you for using the Hostel Management System!
+Feel free to contribute to the project by forking and submitting pull requests. If you encounter any issues or have suggestions for improvement, please open an issue in the repository. Thank you for using the Hostel Management System.
