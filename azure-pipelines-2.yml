@@ -13,7 +13,12 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
+- task: SendEmail@2
+  inputs:
+    To: 'brijpatidar2003@gmail.com'
+    From: '21ituos128@ddu.ac.in'
+    Subject: 'Demo Mail'
+    Body: 'This mail is sent you by azure devops. it means that github FSD/hostel-management is changed or commited.'
+    BodyAsHtml: false
+    AddAttachment: false
